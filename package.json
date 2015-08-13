@@ -54,7 +54,8 @@
     "react": "^0.13.3",
     "requirejs": "~2.1.9",
     "webpack": "^1.5.1",
-    "webpack-dev-server": "^1.7.0"
+    "webpack-dev-server": "^1.7.0",
+    "path": "latest"
   },
   "dependencies": {
     "classnames": "^2.1.2",

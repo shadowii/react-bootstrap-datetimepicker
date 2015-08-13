@@ -23,8 +23,9 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, "/dist/"),
-    library: "ReactBootstrapDatetimepicker",
-    libraryTarget: "umd"
+    filename: "react-bootstrap-datetimepicker.js"
+    ,library: "ReactBootstrapDatetimepicker",
+    libraryTarget: "commonjs2"
   },
 
   resolve: {
@@ -32,9 +33,9 @@ module.exports = {
   },
 
   externals: {
-    "react": "React",
-    "react/addons": "React",
-    "react-bootstrap": "ReactBootstrap",
+    "react": true,
+    "react/addons": true,
+    "react-bootstrap": true,
     "moment": "moment"
   },
 
@@ -42,8 +43,7 @@ module.exports = {
     loaders: [
       { test: /\.js?$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
-  },
-
-  plugins: plugins
+  }
+  ,plugins: plugins
 
 };

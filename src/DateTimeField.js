@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from "react";
+import { Component, PropTypes } from "react";
 import moment from "moment";
 import { Glyphicon } from "react-bootstrap";
 import DateTimePicker from "./DateTimePicker.js";
@@ -322,7 +322,7 @@ export default class DateTimeField extends Component {
 
   render() {
     return (
-          <div>
+          <div className="input-group date" ref="datetimepicker">
             {this.renderOverlay()}
             <DateTimePicker ref="widget"
                   addDecade={this.addDecade}
@@ -355,10 +355,8 @@ export default class DateTimeField extends Component {
                   widgetClasses={this.state.widgetClasses}
                   widgetStyle={this.state.widgetStyle}
             />
-            <div className="input-group date" ref="datetimepicker">
-              <input type="text" className="form-control" onChange={this.onChange} value={this.state.inputValue} {...this.props.inputProps}/>
-              <span className="input-group-addon" onClick={this.onClick} onBlur={this.onBlur} ref="dtpbutton"><Glyphicon glyph={this.state.buttonIcon} /></span>
-            </div>
+            <input type="text" className="form-control" onChange={this.onChange} value={this.state.inputValue} {...this.props.inputProps}/>
+            <span className="input-group-addon" onClick={this.onClick} onBlur={this.onBlur} ref="dtpbutton"><Glyphicon glyph={this.state.buttonIcon} /></span>
           </div>
     );
   }

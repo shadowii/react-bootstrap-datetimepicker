@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from "react";
+import { Component, PropTypes } from "react";
 import { Glyphicon } from "react-bootstrap";
 import classnames from "classnames";
 import DateTimePickerDate from "./DateTimePickerDate.js";

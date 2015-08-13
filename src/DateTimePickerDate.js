@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from "react";
+import { Component, PropTypes } from "react";
 import DateTimePickerDays from "./DateTimePickerDays";
 import DateTimePickerMonths from "./DateTimePickerMonths";
 import DateTimePickerYears from "./DateTimePickerYears";
